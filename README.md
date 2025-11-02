@@ -1,16 +1,71 @@
-# React + Vite
+# music explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyek Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web.
 
-Currently, two official plugins are available:
+- **Nama:** Muhammad Daffansyah Desuandi
+- **NIM:** 123140127
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Link Deployment (Vercel)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Aplikasi ini telah di-deploy dan dapat diakses secara publik melalui link berikut:
 
-## Expanding the ESLint configuration
+**https://utsdaffansyah123140127.vercel.app/**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Deskripsi
+
+**Music Explorer** Aplikasi web front-end yang dibangun dengan React dan di-bundle menggunakan Vite untuk eksplorasi dan manajemen daftar putar (playlist). Pengguna dapat mencari lagu, melihat detailnya, membuat daftar putar, dan mengelola koleksi mereka.
+
+## Fitur Utama
+- **Pencarian dan Tampilan Hasil Lagu:** Fitur ini memungkinkan pengguna menemukan konten dan menampilkan hasilnya dalam format yang terstruktur.
+- **Manajemen Library Playlist:** Fitur ini mengatur, menampilkan, dan mengelola koleksi daftar putar pengguna.
+- **Menambahkan Lagu ke Playlist :** Ini adalah fitur interaksi utama yang menghubungkan hasil pencarian dengan koleksi playlist pengguna.
+- **Desain Responsif:** Pengguna dapat menggunakan tampilan mobile
+- **Penyimpanan Lokal:** Daftar playlist disimpan di `localStorage` browser, sehingga data favorit pengguna tidak akan hilang bahkan setelah me-refresh atau menutup halaman.
+
+## Teknologi yang Digunakan
+
+- **Framework:** React.js (dibuat menggunakan Vite)
+- **State Management:** React Hooks (`useState`, `useEffect`)
+- **Styling:** CSS Modules
+- **HTTP Client:** Fetch API (untuk berinteraksi dengan Met Museum API)
+- **Penyimpanan:** LocalStorage
+
+## Cara Instalasi dan Menjalankan Proyek
+
+Jika Anda ingin menjalankan proyek ini di komputer lokal Anda, ikuti langkah-langkah berikut:
+
+1.  **Clone repository ini:**
+    ```bash
+    git clone [MASUKKAN_URL_GIT_REPOSITORY_ANDA_DI_SINI]
+    ```
+
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd [NAMA_FOLDER_PROYEK_ANDA]
+    ```
+
+3.  **Install semua dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Jalankan aplikasi di mode development:**
+    ```bash
+    npm run dev
+    ```
+
+5.  Buka `http://localhost:5173` (atau port yang tertera di terminal Anda) di browser.
+
+## Tampilan Aplikasi
+
+Berikut adalah screenshot dari tampilan aplikasi:
+
+**Halaman Beranda (Pencarian)**
+![Tampilan Halaman Beranda](./Screenshot/Beranda.png)
+
+**Halaman pencarian**
+![Tampilan Halaman pencarian](./Screenshot/pencarian.png)
