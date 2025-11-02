@@ -1,0 +1,336 @@
+body{
+    background-color: black;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.Berandabutton {
+    border: none;
+    background-color: rgb(64, 64, 64);
+    border-radius: 999px;
+    cursor: pointer;
+    padding: 8px 10px 8px 10px;
+}
+.Berandabutton svg{
+    height: 25px;
+    width: 25px;
+    fill: white;
+}
+.Berandabutton:hover{
+    background-color: rgb(156, 155, 155);
+}
+.Searchbox {
+    display: flex;
+    gap: 0x;
+    border-radius: 200px;
+    overflow: hidden;
+}
+.Searchbox input{
+    padding: 10px 200px 10px 20px;
+    font-size: 14px;
+    background-color: rgb(64, 64, 64);
+    color: white ;
+    border: none;
+    outline: none;
+}
+.Searchbox input::placeholder{
+    color: rgb(194, 194, 194);
+}
+.searchbutton{
+    padding: 8px ;
+    background-color: rgb(54, 54, 54);
+    color: white ;
+    border: none;
+    cursor: pointer;
+}
+.searchbutton svg{
+    height: 25px;
+    width:  25px;
+    fill:white;
+}
+.searchbutton:hover{
+    background-color: rgb(156, 155, 155);
+}
+.loading-indicator {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+}
+main{
+    display: flex;   
+    margin: 15px 0px 0px 0px;
+    gap: 10px;
+    align-items: flex-start;
+}
+.Table-Hasil{
+   width: 100%;
+   border-collapse: collapse;
+   color: white;
+}
+.Table-Hasil th{
+    text-align: left;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(53, 53, 53);
+}
+.Table-Hasil td {
+    padding: 10px 10px;
+    font-size: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgb(53, 53, 53);
+}
+
+.Table-head:hover{
+    background-color: rgb(53, 53, 53);
+}
+
+aside{
+    background-color: rgb(39, 38, 38);
+    display: flex;
+    gap: 20px;
+    color: white;
+    margin-left: 5px;
+    padding: 10px 20px 10% 15px;
+    flex-shrink: 0;
+    border-radius:10px ;
+}
+aside h1{
+    font-size: 16px;
+}
+.form-actions {
+    display: flex;
+    gap: 50px;
+    margin-top: 15px;
+}
+.submit-btn,
+.cancel-btn {
+    padding: 8px 15px;
+    font-size: 14px;  
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.2s;
+    background-color:rgb(64, 64, 64) ;
+}
+.submit-btn:hover{
+    background-color: rgb(156, 155, 155);
+}
+.cancel-btn:hover{
+    background-color: rgb(156, 155, 155);
+}
+.playlist-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.cover-preview{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+}
+
+.Create-Playlist{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 75px;
+    border-radius: 200px;
+    font-size: 14px;
+    border: none;
+    color: white;
+    padding: 0px 25px 0px 25px;
+    background-color: rgb(64, 64, 64);
+    cursor: pointer;
+}
+
+.Create-Playlist:hover{
+    background-color: rgb(156, 155, 155);
+}
+.mainmenu{
+    align-items:start;
+    background-color: white;
+    width: 100%;
+    color: white;
+    background-color: rgb(39, 38, 38);
+    border-radius: 10px ;
+    padding: 20px;
+    
+}
+.mainmenu-text{
+    font-size: 55px;
+    padding: 0px 0px 20% 30px;
+}
+.mainmenu-text h1{
+    font-size: 55px;
+}
+.mainmenu-text p{
+    font-size: 40px;
+    color: rgb(194, 194, 194);
+}
+.tidakadahasil {
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+}
+.Table-Hasil td audio {
+    display: block;
+    margin: 0;
+}
+.add-to-playlist-btn {
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    cursor: pointer;
+}
+.add-to-playlist-btn:hover{
+    background-color: rgb(156, 155, 155) ;
+}
+.hidden{
+    display: none;
+}
+footer{
+    display: flex;
+    margin: 40px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.modal-backdrop {
+    /* 🛑 KUNCI: Membuat modal tetap di viewport */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Latar belakang transparan gelap */
+    background-color: rgba(0, 0, 0, 0.7); 
+    
+    /* Memastikan modal di atas semua elemen lain */
+    z-index: 1000; 
+    
+    /* 🛑 KUNCI: Untuk memposisikan konten di tengah layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    /* Atur lebar dan tinggi modal agar terlihat bagus */
+    background-color: rgb(39, 38, 38);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    
+    /* Batasi ukurannya */
+    width: 300px; 
+    max-width: 90%; 
+    
+    /* Animasi (Opsional) */
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-title {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+.delete-playlist-btn {
+    /* Gaya untuk tombol Hapus di sidebar */
+    background: none;
+    border: none;
+    color: white; /* Sesuaikan dengan warna teks Anda */
+    font-size: 1.2em;
+    padding: 0 5px;
+    margin-left: auto; /* Mendorong tombol ke kanan */
+    cursor: pointer;
+    opacity: 0.5; /* Agak transparan saat tidak dihover */
+    transition: opacity 0.2s;
+}
+
+.delete-playlist-btn:hover {
+    opacity: 1;
+    color: #ff4d4d; /* Warna merah saat dihover */
+}
+
+/* Pastikan layout playlist item mendukung tombol ini */
+.playlist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) { 
+    
+    header {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 10px; 
+    }
+
+    .Searchbox {
+        width: 60%; 
+        margin: 0 auto; 
+        display: flex;
+    }
+
+    .Searchbox input {
+        padding: 10px 15px; 
+        width: 100%; 
+    }
+    
+    .Berandabutton {
+        position: absolute; 
+        top: 10px;
+        left: 20px;
+    }
+    
+    /* 2. Perbaikan Layout Utama (main & aside) */
+    main {
+        flex-direction: column; 
+        gap: 15px;
+        margin: 15px 5px 0px 5px;
+    }
+
+    aside {
+        width: 100%; 
+        order: 1;    
+        padding: 15px;
+        gap: 10px; 
+    }
+
+    .mainmenu {
+        width: 100%;
+        order: 2;    
+        padding: 10px; 
+        overflow-x: auto; /* PENTING: Scroll horizontal untuk tabel */
+    }
+    
+    .Create-Playlist {
+        margin-left: auto; 
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+    
+    /* 3. Perbaikan Tabel Lagu */
+    .Table-Hasil th,
+    .Table-Hasil td {
+        padding: 8px 5px; 
+        font-size: 12px;
+        white-space: nowrap; 
+    }
+}
